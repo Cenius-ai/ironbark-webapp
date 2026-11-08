@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ironbark"
+version = "1.0.0"
+description = "Blacksmith shop reference: heat colour by temperature, quench medium per alloy, hammer strike order per billet."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+ironbark = "ironbark:run_cli"
+
+[tool.setuptools]
+py-modules = ["ironbark"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
